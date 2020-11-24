@@ -1,0 +1,65 @@
+<h1 class="title">Registrar nueva Tienda</h1>
+<h2 class="subtitle">Desde acá podrás registrar tu nueva tienda</h2>
+
+<div class="has-text-centered is-size-3">
+  -- procesando --
+</div>
+
+<form>
+  <div class="field">
+    <label class="label">Nombre</label>
+    <div class="control">
+      <input required minlength="4" name="name" class="input" type="text"
+             placeholder="Ingrese el nombre de la tienda">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">RUC</label>
+    <div class="control">
+      <input required minlength="10" name="RUC" class="input" type="number"
+             placeholder="Ingrese su RUC">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Telefono</label>
+    <div class="control">
+      <input required minlength="9" name="phone" class="input" type="text"
+             placeholder="Ingrese su telefono">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Pais</label>
+    <div class="control">
+      <input required minlength="3" name="country" class="input" type="text"
+             placeholder="Ingrese su pais de procedencia">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Ciudad</label>
+    <div class="control">
+      <input required minlength="3" name="city" class="input" type="text"
+             placeholder="Ingrese su ciudad">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Dirección</label>
+    <div class="control">
+      <input required minlength="10" name="address" class="input" type="text"
+             placeholder="Ingrese su dirección">
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link is-medium">Siguiente</button>
+    </div>
+    <div class="control">
+      <a routerLink="/stores" class="button is-link is-light is-medium">Volver</a>
+    </div>
+  </div>
+</form>

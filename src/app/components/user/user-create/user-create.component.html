@@ -1,0 +1,48 @@
+<h1 class="title">Registrar nueva Usuario</h1>
+<h2 class="subtitle">Desde acá podrás registrar tu nueva cuenta</h2>
+<hr>
+
+<div *ngIf="loading" class="has-text-centered is-size-3">
+  Creando nuevo usuario
+</div>
+
+<form *ngIf="!loading" (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <div class="field">
+    <label class="label">Username</label>
+    <div class="control">
+      <input required minlength="6" name="username" class="input" type="text"
+             placeholder="Ingrese su nuevo username"
+             [class.is-danger]="name.invalid && name.dirty"
+             [class.is-success]="!name.invalid && name.dirty"
+             [(ngModel)]="user.username" #name="ngModel">
+    </div>
+    <ng-container *ngIf="name.invalid && name.dirty">
+      <span *ngIf="name.errors.required" class="help is-danger">El nombre de usuario no puede ser nulo.</span>
+      <span *ngIf="name.errors.minlength" class="help is-danger">Debe ingresar como mínimo 6 caracteres.</span>
+    </ng-container>
+  </div>
+
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input required minlength="6" name="password" class="input" type="text"
+             placeholder="Ingrese su contraseña"
+             [class.is-danger]="price.invalid && price.dirty"
+             [class.is-success]="!price.invalid && price.dirty" [(ngModel)]="user.password" #price="ngModel">
+    </div>
+    <ng-container *ngIf="price.invalid && price.dirty">
+      <span *ngIf="price.errors.required" class="help is-danger">Su contraseña no puede ser nula.</span>
+      <span *ngIf="price.errors.minlength" class="help is-danger">Debe ingresar como mínimo una contraseña de 6 caracteres.</span>
+    </ng-container>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button  [disabled]="!userForm.form.valid"  class="button is-link is-medium">Crear</button>
+    </div>
+    <div class="control">
+      <a routerLink="" class="button is-link is-light is-medium">Volver</a>
+    </div>
+  </div>
+
+</form>

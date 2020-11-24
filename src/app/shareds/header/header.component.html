@@ -1,0 +1,36 @@
+<div class="hero-head">
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a [routerLink]="['/']" class="navbar-item">
+          <h2><strong>Shop At Home</strong></h2>
+        </a>
+        <span class="navbar-burger burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <div class="buttons">
+            <a [routerLink]="['/products']" class="button is-light">
+              Productos
+            </a>
+            <a [routerLink]="['/stores']" class="button is-light">
+              Tiendas
+            </a>
+            <a [routerLink]="['/users']" class="button is-light">
+              Registrate
+            </a>
+            <a (click)="signOut()" class="button is-primary">
+              Cerrar Sesión
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
