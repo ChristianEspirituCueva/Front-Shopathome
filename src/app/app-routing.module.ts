@@ -8,6 +8,7 @@ import {LoginComponent} from './components/login/login.component';
 import {StoreListComponent} from './components/store/store-list/store-list.component';
 import {StoreCreateComponent} from './components/store/store-create/store-create.component';
 import {UserCreateComponent} from './components/user/user-create/user-create.component';
+import {OrderListComponent} from './components/order/order-list/order-list.component';
 
 const routes: Routes = [
   {path: '', component: DefaultComponent},
@@ -28,6 +29,12 @@ const routes: Routes = [
     ]
   },
   {path: 'users', component: UserCreateComponent},
+  {
+    path: 'orders',
+    children: [
+      {path: '', component: OrderListComponent}
+    ]
+  },
 ];
 
 @NgModule({

@@ -1,1 +1,35 @@
-<p>order-list works!</p>
+<div class="columns is-vcentered">
+  <div class="column has-text-right">
+    <a [routerLink]="['create']" class="button is-primary is-medium">Registrar una nueva orden</a>
+  </div>
+</div>
+<hr>
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      S/.100.00
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <tr>
+        <th>Leche descremada-</th>
+        <td>S/.100.00</td>
+      </tr>
+      <br>
+      <time datetime="2020-11-24">09:45 PM - 24 Nov 2020</time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Pagar</a>
+    <a href="#" class="card-footer-item">Editar</a>
+    <a href="#" class="card-footer-item">Eliminar</a>
+  </footer>
+</div>
+

@@ -18,6 +18,7 @@ import { StoreDetailComponent } from './components/store/store-list/store-detail
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
+import { OrderCreateComponent } from './components/order/order-create/order-create.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserCreateComponent } from './components/user/user-create/user-create.c
     StoreListComponent,
     StoreCreateComponent,
     StoreDetailComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    OrderCreateComponent
   ],
   imports: [
     BrowserModule,

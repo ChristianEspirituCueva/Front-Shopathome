@@ -24,4 +24,7 @@ export class UserCreateComponent implements OnInit {
       });
   }
 
+  ngOnInit(): void {
+  }
+
 }
