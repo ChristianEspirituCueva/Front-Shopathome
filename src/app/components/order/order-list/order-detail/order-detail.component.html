@@ -1,0 +1,8 @@
+<div class="box">
+  <a (click)="delete()" class="delete is-pulled-right"></a>
+  <div class="title is-size-4">{{order.total| currency}}</div>
+  <div class="title is-size-4">{{order.user| currency}}</div>
+  <div class="subtitle is-size-5">
+    <a [routerLink]="[order.id + '/update']">{{order.user}}</a>
+  </div>
+</div>

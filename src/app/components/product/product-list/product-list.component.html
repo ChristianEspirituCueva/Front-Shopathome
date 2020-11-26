@@ -6,7 +6,7 @@
 <hr>
 
 <div *ngIf="products.length" class="columns is-multiline">
-  <app-product-detail class="column is-4"*ngFor="let product of products " (remove)="removeDeleteProduct($event)" [entry]="product"></app-product-detail>
+  <app-product-detail class="column is-4" *ngFor="let product of products | productFilter:listFilter" (remove)="removeDeleteProduct($event)" [entry]="product"></app-product-detail>
 </div>
 
 <div *ngIf="products.length===0" class="has-text-centered is-size-4">

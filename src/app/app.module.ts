@@ -19,11 +19,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { OrderCreateComponent } from './components/order/order-create/order-create.component';
+import { OrderDetailComponent } from './components/order/order-list/order-detail/order-detail.component';
+import { ProductFilterPipe } from './components/product/product-list/product-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    ProductFilterPipe,
     HeaderComponent,
     FooterComponent,
     DefaultComponent,
@@ -36,7 +39,8 @@ import { OrderCreateComponent } from './components/order/order-create/order-crea
     StoreCreateComponent,
     StoreDetailComponent,
     UserCreateComponent,
-    OrderCreateComponent
+    OrderCreateComponent,
+    OrderDetailComponent
   ],
   imports: [
     BrowserModule,

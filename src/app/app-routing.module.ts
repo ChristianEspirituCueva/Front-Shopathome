@@ -9,6 +9,7 @@ import {StoreListComponent} from './components/store/store-list/store-list.compo
 import {StoreCreateComponent} from './components/store/store-create/store-create.component';
 import {UserCreateComponent} from './components/user/user-create/user-create.component';
 import {OrderListComponent} from './components/order/order-list/order-list.component';
+import {OrderCreateComponent} from './components/order/order-create/order-create.component';
 
 const routes: Routes = [
   {path: '', component: DefaultComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
   {
     path: 'orders',
     children: [
-      {path: '', component: OrderListComponent}
+      {path: '', component: OrderListComponent},
+      {path: 'create', component: OrderCreateComponent}
     ]
   },
 ];
